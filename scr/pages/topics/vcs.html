@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCS</title>
+
+    <link rel="stylesheet" href="../../assets/styles/main.css" />
+    <!-- <link rel="stylesheet" href="./assets/styles/syntax.css" /> -->
+
+    <!-- Fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <header>
+      <div id="nav-bg">
+        <nav id="top-nav">
+          <a href="../../index.html" id="logo">[missing-semester]</a>
+          <label class="menu-label" for="menu-icon"></label>
+          <div class="trigger">
+            <div class="trigger-child">
+              <span class="nav-link"><a href="../topics.html">topics</a></span>
+              <span class="nav-link"><a href="../info.html">info</a></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="content">
+      <main>
+        <h1 class="title">Version Control (Git)</h1>
+
+        <div class="youtube" style="padding-bottom: 56.25%">
+          <iframe
+            src="https://www.youtube.com/watch?v=WbwIoQYP6no"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <p>
+          <strong>Control System</strong> This basically means that Git is a
+          content tracker. So Git can be used to store content — it is mostly
+          used to store code due to the other features it provides.
+        </p>
+
+        <p>
+          <strong>Version Control System:</strong> The code which is stored in
+          Git keeps changing as more code is added. Also, many developers can
+          add code in parallel. So Version Control System helps in handling this
+          by maintaining a history of what changes have happened. Also, Git
+          provides features like branches and merges, which I will be covering
+          later.
+        </p>
+        <p>
+          <strong>Distributed Version Control System:</strong> Git has a remote
+          repository which is stored in a server and a local repository which is
+          stored in the computer of each developer. This means that the code is
+          not just stored in a central server, but the full copy of the code is
+          present in all the developers’ computers. Git is a Distributed Version
+          Control System since the code is present in every developer’s
+          computer. I will explain the concept of remote and local repositories
+          later in this article.
+        </p>
+
+        <p>
+          Modern VCSs also let you easily (and often automatically) answer
+          questions like:
+        </p>
+
+        <ul>
+          <li>Who wrote this module?</li>
+          <li>
+            When was this particular line of this particular file edited? By
+            whom? Why was it edited?
+          </li>
+          <li>
+            Over the last 1000 revisions, when/why did a particular unit test
+            stop working?
+          </li>
+        </ul>
+
+        <p>
+          While other VCSs exist, <strong>Git</strong> is the de facto standard
+          for version control. This
+          <a href="https://xkcd.com/1597/">XKCD comic</a> captures Git’s
+          reputation:
+        </p>
+
+        <p>
+          <img src="https://imgs.xkcd.com/comics/git.png" alt="xkcd 1597" />
+        </p>
+      </main>
+
+      <footer>
+        <hr />
+
+        <div class="small center">
+          <p>
+            Feel free to edit the page
+            <a href="/">here</a>.
+          </p>
+
+          <p>Licensed under <a href="/">MIT</a>.</p>
+          <p>
+            <a href="https://github.com/brunoalfred/cs221-project"
+              >Source code</a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
