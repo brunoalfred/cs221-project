@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VCS</title>
+
+    <link rel="stylesheet" href="../../assets/styles/main.css" />
+    <!-- <link rel="stylesheet" href="./assets/styles/syntax.css" /> -->
+
+    <!-- Fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+  </head>
+  <body>
+    <header>
+      <div id="nav-bg">
+        <nav id="top-nav">
+          <a href="../../index.html" id="logo">[missing-semester]</a>
+          <label class="menu-label" for="menu-icon"></label>
+          <div class="trigger">
+            <div class="trigger-child">
+              <span class="nav-link"><a href="../topics.html">topics</a></span>
+              <span class="nav-link"><a href="../info.html">info</a></span>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div id="content">
+      <main>
+        <h1 style="text-align: center">Comming soon</h1>
+
+        
+          <div class="timer" id="days"></div>
+          <div class="timer" id="hours"></div>
+          <div class="timer" id="minutes"></div>
+          <div class="timer" id="seconds"></div>
+        
+      </main>
+
+      <footer>
+        <hr />
+
+        <div class="small center">
+          <p>
+            Feel free to edit the page
+            <a href="/">here</a>.
+          </p>
+
+          <p>Licensed under <a href="/">MIT</a>.</p>
+          <p>
+            <a href="https://github.com/brunoalfred/cs221-project"
+              >Source code</a
+            >.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- <script type="text/javascript" src="../../assets/scripts/main.js" onload="myfunc();"></script> -->
+
+    <script>
+
+// The data/time we want to countdown to
+var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+
+// Run myfunc every second
+var myfunc = setInterval(function () {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+
+    // Calculating the days, hours, minutes and seconds left
+    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+
+    // Result is output to the specific element
+    document.getElementById("days").innerHTML = days + " Days "
+    document.getElementById("hours").innerHTML = hours + " Hours "
+    document.getElementById("minutes").innerHTML = minutes + " Minutes "
+    document.getElementById("seconds").innerHTML = seconds + " Seconds "
+
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+        clearInterval(myfunc);
+        document.getElementById("days").innerHTML = ""
+        document.getElementById("hours").innerHTML = ""
+        document.getElementById("minutes").innerHTML = ""
+        document.getElementById("seconds").innerHTML = ""
+        document.getElementById("end").innerHTML = "TIME UP!!";
+    }
+}, 1000);
+
+    </script>
+  </body>
+</html>
