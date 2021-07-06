@@ -21,7 +21,7 @@
     <header>
       <div id="nav-bg">
         <nav id="top-nav">
-          <a href="../index.html" id="logo">[missing-semester]</a>
+          <a href="../index.html" id="logo">[missing-classes]</a>
           <label class="menu-label" for="menu-icon"></label>
           <div class="trigger">
             <div class="trigger-child">
@@ -36,13 +36,13 @@
     <div id="content">
       <main>
         <h1 >Submit your Proposal</h1>
-        <form action="" id="proposal-form">
+        <form action="" id="proposal-form" onSubmit="validateForm()">
           <!-- fieldsets -->
           <fieldset>
             <h2 class="fs-title">Topic Details</h2>
             <h3 class="fs-subtitle"></h3>
-            <input type="text" name="name" placeholder="Name" />
-            <input type="text" name="email" placeholder="Email" />
+            <input type="text" name="name" id="rname" placeholder="Name" />
+            <input type="email" name="email" id="remail" placeholder="Email" />
             <input
               type="text"
               name="programme"
@@ -56,13 +56,14 @@
               rows="10"
               placeholder="Describe the Topic in brief"
             ></textarea>
-
+            <p id="warn" style="font-size: 10px; color: red;"></p>
             <input
               type="button"
               name="next"
               class="submit action-button"
               value="Submit"
             />
+            
           </fieldset>
         </form>
         <div  id="submitted" style="display: none;">

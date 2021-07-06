@@ -10,4 +10,10 @@ $(".submit").click(function () {
 });
 
 
-
+$(".submit").click(function (){
+    if (document.getElementById('rname').value == "" || document.getElementById("remail").value == "") {
+        alert("enter something valid");
+location.reload();
+        return false;
+    }
+})
